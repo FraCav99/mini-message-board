@@ -1,0 +1,18 @@
+<%- include('./header.ejs') %>
+
+<div class="wrapper form">
+    <a href="/" id="go-back">
+        <button>←</button>
+    </a>
+
+    <form method="POST" action="/new">
+        <input type="text" name="messageTitle" placeholder="Title" required/>
+
+        <input type="text" name="messageAuthor" placeholder="Author (optional)"/>
+
+        <textarea name="message" cols="30" rows="10" placeholder="Insert your message here..." required></textarea>
+        <button type="submit">Submit</button>
+    </form>
+</div>
+
+<%- include('./footer.ejs') %>

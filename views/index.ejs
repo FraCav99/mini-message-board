@@ -1,11 +1,31 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title><%= title %></title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
-  </head>
-  <body>
-    <h1><%= title %></h1>
-    <p>Welcome to <%= title %></p>
-  </body>
-</html>
+<%- include('./header.ejs') %>
+    <header>
+      <h1 class="index-title"><%= title %></h1>
+      <h2 class="subtitle">Feel free to say everything!</h2>
+    </header>
+    
+    <div class="wrapper">
+      <div class="button-container">
+        <a href="/new">
+          <button>Want to say something?</button>
+        </a>
+      </div>
+
+      <% messages.forEach(message => { %>
+        <div class="message-card">
+          <div class="card-header">
+            <h3><%= message.title %></h3>
+          </div>
+          <div class="card-body">
+            <p><%= message.text %></p>
+          </div>
+          <hr>
+          <div class="card-footer">
+            <span><%= message.user %></span>
+            <span><%= message.added %></span>
+          </div>
+        </div>
+      <% }); %>
+    </div>
+
+<%- include('./footer.ejs') %>
