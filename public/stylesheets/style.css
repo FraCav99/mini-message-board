@@ -194,3 +194,8 @@ footer {
   flex-shrink: 0;
   background-color: #0f4c75;
 }
+
+footer a {
+  color: #bbe1fa;
+  text-decoration: none;
+}
