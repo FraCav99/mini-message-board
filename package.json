@@ -26,5 +26,6 @@
     "url": "https://github.com/FraCav99/mini-message-board/issues"
   },
   "homepage": "https://github.com/FraCav99/mini-message-board#readme",
-  "description": ""
+  "description": "",
+  "engines": {"node": "14.15.0"}
 }
